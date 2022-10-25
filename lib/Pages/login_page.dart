@@ -17,6 +17,10 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+      ),
       backgroundColor: const Color.fromARGB(255, 188, 217, 240),
       body: SingleChildScrollView(
         child: Padding(
@@ -74,7 +78,7 @@ class _LoginPageState extends State<LoginPage> {
                           MaterialPageRoute(
                               builder: (context) => const Principal()));
                     },
-                    child: const Text("Ingresar"))
+                    child: const Text("Ingresar")),
               ],
             ),
           ),

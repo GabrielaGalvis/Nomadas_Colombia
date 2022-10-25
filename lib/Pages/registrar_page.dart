@@ -49,6 +49,17 @@ class _RegistrarPageState extends State<RegistrarPage> {
                       suffixIcon: Icon(Icons.vpn_key_sharp)),
                 ),
                 const SizedBox(
+                  height: 20,
+                ),
+                TextFormField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                      labelText: "Repetir Contraseña",
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                      suffixIcon: Icon(Icons.vpn_key_sharp)),
+                ),
+                const SizedBox(
                   height: 30,
                 ),
                 ElevatedButton(

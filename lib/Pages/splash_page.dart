@@ -1,7 +1,6 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
-import 'package:ptoyecto_ciclo4/Pages/loading.dart';
 import 'package:ptoyecto_ciclo4/Pages/login_page.dart';
 
 class SplashPage extends StatefulWidget {
@@ -12,6 +11,7 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
+  @override
   void initState() {
     timeNext();
     super.initState();
@@ -28,13 +28,27 @@ class _SplashPageState extends State<SplashPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 188, 217, 240),
-      body: Center(
-        child: Container(
-          child: const Image(
-              image: AssetImage("assets/Logo2.png"), width: 300, height: 300),
-          padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 40),
-          margin: const EdgeInsets.all(30),
-        ),
+      body: SafeArea(
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const SizedBox(),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 40, horizontal: 40),
+                child: Image(
+                  image: AssetImage("assets/Logo2.png"),
+                ),
+              ),
+              Column(
+                children: const [
+                  CircularProgressIndicator(),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text('Cargando...'),
+                ],
+              )
+            ]),
       ),
     );
   }
