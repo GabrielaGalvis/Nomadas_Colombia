@@ -14,7 +14,6 @@ class _RegistrarPageState extends State<RegistrarPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 188, 217, 240),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 50),
@@ -35,7 +34,10 @@ class _RegistrarPageState extends State<RegistrarPage> {
                       hintText: "Correo electronico",
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20)),
-                      suffixIcon: Icon(Icons.email)),
+                      suffixIcon: Icon(
+                        Icons.email,
+                        color: Colors.lightBlue,
+                      )),
                 ),
                 const SizedBox(
                   height: 20,
@@ -46,7 +48,10 @@ class _RegistrarPageState extends State<RegistrarPage> {
                       labelText: "Contraseña",
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20)),
-                      suffixIcon: Icon(Icons.vpn_key_sharp)),
+                      suffixIcon: Icon(
+                        Icons.vpn_key_sharp,
+                        color: Colors.lightBlue,
+                      )),
                 ),
                 const SizedBox(
                   height: 20,
@@ -57,12 +62,23 @@ class _RegistrarPageState extends State<RegistrarPage> {
                       labelText: "Repetir Contraseña",
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20)),
-                      suffixIcon: Icon(Icons.vpn_key_sharp)),
+                      suffixIcon: Icon(
+                        Icons.vpn_key_sharp,
+                        color: Colors.lightBlue,
+                      )),
                 ),
                 const SizedBox(
                   height: 30,
                 ),
                 ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        fixedSize: Size(400, 50),
+                        backgroundColor: Colors.lightBlue,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50)),
+                        shadowColor: Colors.black26,
+                        textStyle: TextStyle(
+                            fontStyle: FontStyle.italic, fontSize: 20)),
                     onPressed: () {
                       Navigator.push(
                           context,

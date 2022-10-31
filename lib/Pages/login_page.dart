@@ -11,9 +11,44 @@ class LoginPage extends StatefulWidget {
   State<LoginPage> createState() => _LoginPageState();
 }
 
-final TextEditingController _required = TextEditingController();
-
 class _LoginPageState extends State<LoginPage> {
+  final email = TextEditingController();
+  final password = TextEditingController();
+
+  void validarUsuario() {
+    if (email.text.isNotEmpty && password.text.isNotEmpty) {
+      if (email.text == "nomadacolombia@gmail.com") {
+        if (password.text == "nomada1234") {
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) => const Principal()));
+        } else {
+          mostrarMensaje("Contraseña Incorrecta");
+        }
+      } else {
+        mostrarMensaje('Usuario no registrado');
+      }
+    } else {
+      mostrarMensaje('Datos Obligatorios');
+    }
+  }
+
+  void mostrarMensaje(String mensaje) {
+    final pantalla = ScaffoldMessenger.of(context);
+    pantalla.showSnackBar(SnackBar(
+      content: Text(
+        mensaje,
+        style: TextStyle(fontSize: 18),
+      ),
+      backgroundColor: Color.fromARGB(255, 190, 76, 68),
+      duration: Duration(seconds: 5),
+      action: SnackBarAction(
+        label: 'Aceptar',
+        textColor: Colors.white,
+        onPressed: pantalla.hideCurrentSnackBar,
+      ),
+    ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +56,6 @@ class _LoginPageState extends State<LoginPage> {
         elevation: 0,
         backgroundColor: Colors.transparent,
       ),
-      backgroundColor: const Color.fromARGB(255, 188, 217, 240),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 50),
@@ -38,23 +72,31 @@ class _LoginPageState extends State<LoginPage> {
                   margin: const EdgeInsets.all(30),
                 ),
                 TextFormField(
+                  controller: email,
                   decoration: InputDecoration(
                       hintText: "Correo elctronico",
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20)),
-                      suffixIcon: Icon(Icons.email)),
+                      suffixIcon: Icon(
+                        Icons.email,
+                        color: Colors.lightBlue,
+                      )),
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 TextFormField(
-                  controller: _required,
+                  controller: password,
                   obscureText: true,
                   decoration: InputDecoration(
-                      labelText: "Contraseña",
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20)),
-                      suffixIcon: Icon(Icons.vpn_key_sharp)),
+                    labelText: "Contraseña",
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    suffixIcon: Icon(
+                      Icons.vpn_key_sharp,
+                      color: Colors.lightBlue,
+                    ),
+                  ),
                 ),
                 TextButton(
                     style: TextButton.styleFrom(
@@ -72,11 +114,16 @@ class _LoginPageState extends State<LoginPage> {
                     },
                     child: const Text("Registrarse")),
                 ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        fixedSize: Size(400, 50),
+                        backgroundColor: Colors.lightBlue,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50)),
+                        shadowColor: Colors.black26,
+                        textStyle: TextStyle(
+                            fontStyle: FontStyle.italic, fontSize: 20)),
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Principal()));
+                      validarUsuario();
                     },
                     child: const Text("Ingresar")),
               ],

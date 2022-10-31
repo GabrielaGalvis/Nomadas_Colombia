@@ -10,10 +10,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'App de Viajeros',
-      home: SplashPage(),
+      theme: ThemeData(canvasColor: const Color.fromARGB(255, 188, 217, 240)),
+      home: const SplashPage(),
     );
   }
 }

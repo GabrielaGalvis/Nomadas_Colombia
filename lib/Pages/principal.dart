@@ -33,7 +33,6 @@ class _PtincipalState extends State<Principal> {
 
     return Scaffold(
       appBar: AppBar(title: const Text("Detalle Sitio Turistico POI")),
-      backgroundColor: const Color.fromARGB(255, 188, 217, 240),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
