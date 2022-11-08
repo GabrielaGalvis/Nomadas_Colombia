@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "228455474740",
+    "project_id": "app-viajeros-f3ca7",
+    "storage_bucket": "app-viajeros-f3ca7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:228455474740:android:26a28e4927b1a044b28c61",
+        "android_client_info": {
+          "package_name": "com.example.ptoyecto_ciclo4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "228455474740-6j18fmqdgubl82oqvc94i0urqbdoj3h7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMwixChN7yVegSoi_S5GNin1msQ-bVGtc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "228455474740-6j18fmqdgubl82oqvc94i0urqbdoj3h7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

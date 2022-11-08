@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>228455474740-8m0upe9fvb2rlcpnkrbo3u0etgn6810k.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.228455474740-8m0upe9fvb2rlcpnkrbo3u0etgn6810k</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC9_ULbEkc84wgzDuD1NE1PeH2W6wD18Fk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>228455474740</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.ptoyectoCiclo4</string>
+	<key>PROJECT_ID</key>
+	<string>app-viajeros-f3ca7</string>
+	<key>STORAGE_BUCKET</key>
+	<string>app-viajeros-f3ca7.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:228455474740:ios:47bbd7187643a729b28c61</string>
+</dict>
+</plist>
