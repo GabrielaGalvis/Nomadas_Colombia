@@ -1,7 +1,7 @@
 // ignore_for_file: sort_child_properties_last, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:ptoyecto_ciclo4/Pages/list.dart';
+import 'package:ptoyecto_ciclo4/Pages/listas_page.dart';
 import 'package:ptoyecto_ciclo4/Pages/registrar_page.dart';
 import 'package:ptoyecto_ciclo4/repository/firebase_api.dart';
 
@@ -43,8 +43,8 @@ class _LoginPageState extends State<LoginPage> {
       _showMsg(msg);
       if (msg == 'Bienvenido') {
         // ignore: use_build_context_synchronously
-        Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => const Lista()));
+        Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (context) => const ListasPage()));
       }
     }
   }
