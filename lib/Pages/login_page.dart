@@ -16,8 +16,6 @@ class _LoginPageState extends State<LoginPage> {
   final _email = TextEditingController();
   final _password = TextEditingController();
 
-  //User userload = User.Empty();
-
   final FirebaseApi _firebaseApi = FirebaseApi();
 
   @override

@@ -18,8 +18,6 @@ class _RegistrarPageState extends State<RegistrarPage> {
   final _password = TextEditingController();
   final _repPassword = TextEditingController();
 
-  // String _data = "Informacion: ";
-
   void _showMsg(String msg) {
     final Scaffold = ScaffoldMessenger.of(context);
     Scaffold.showSnackBar(
@@ -151,10 +149,6 @@ class _RegistrarPageState extends State<RegistrarPage> {
                             fontStyle: FontStyle.italic, fontSize: 20)),
                     onPressed: () {
                       _onRegisterButtonClicked();
-                      // Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //         builder: (context) => const LoginPage()));
                     },
                     child: const Text("Registrar"))
               ],

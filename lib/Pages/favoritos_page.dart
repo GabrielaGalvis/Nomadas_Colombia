@@ -24,7 +24,6 @@ class _FavoritosPageState extends State<FavoritosPage> {
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         child: ListaFavoritos(),
       ),
-      //  bottomNavigationBar: const menuInferior(),
     );
   }
 
@@ -46,10 +45,8 @@ class _FavoritosPageState extends State<FavoritosPage> {
                         )),
                     Expanded(
                       child: ListTile(
-                        // title: miCardImage(sitios[i]['foto'], sitios[i]['nombre']),
                         title: Text(lista[i].nombre ?? "",
                             style: GoogleFonts.roboto(
-                              // fontStyle: FontStyle.italic,
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                               color: Colors.black,
@@ -57,12 +54,11 @@ class _FavoritosPageState extends State<FavoritosPage> {
                         subtitle: Text(
                           lista[i].ciudad ?? "",
                           style: GoogleFonts.roboto(
-                              fontSize: 14,
-                              //  fontWeight: FontWeight.bold,
-                              color: Colors.black),
+                              fontSize: 14, color: Colors.black),
                         ),
                         onTap: () {
                           DatosSitio sitiosNew = DatosSitio(
+                              lista[i].id ?? '',
                               lista[i].ciudad ?? '',
                               lista[i].departamento ?? '',
                               lista[i].temperatura ?? '',

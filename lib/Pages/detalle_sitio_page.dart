@@ -36,6 +36,7 @@ class _DetalleSitioState extends State<DetalleSitio> {
 
   void agregarFavoritos() {
     var sitiosFavorito = DetalleSitioLocal()
+      ..id = widget.datosSitio.id
       ..ciudad = widget.datosSitio.ciudad
       ..departamento = widget.datosSitio.departamento
       ..temperatura = widget.datosSitio.temperatura
@@ -44,11 +45,11 @@ class _DetalleSitioState extends State<DetalleSitio> {
       ..calificacion = widget.datosSitio.calificacion
       ..nombre = widget.datosSitio.nombre;
     final box = Datos.datFavoritos();
-    box.add(sitiosFavorito);
+    // box.add(sitiosFavorito);
     if (favorito) {
-      box.delete(sitiosFavorito.ciudad);
+      box.delete(sitiosFavorito.id);
     } else {
-      box.put(sitiosFavorito.ciudad, sitiosFavorito);
+      box.put(sitiosFavorito.id, sitiosFavorito);
     }
     setState(() {
       favorito = !favorito;
@@ -58,7 +59,6 @@ class _DetalleSitioState extends State<DetalleSitio> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        //backgroundColor: const Color.fromARGB(255, 143, 163, 207),
         backgroundColor: const Color.fromARGB(255, 188, 217, 240),
         appBar: AppBar(
           title: Text(widget.datosSitio.nombre),
@@ -81,10 +81,7 @@ class _DetalleSitioState extends State<DetalleSitio> {
             miCardImage(widget.datosSitio.foto,
                 '${'Ciudad: '}${widget.datosSitio.ciudad}\n${'Departamento: '}${widget.datosSitio.departamento}\n${'Temperatura: '}${widget.datosSitio.temperatura}\n\n${'Descripción: '}${widget.datosSitio.descripcion}\n\n${'Valoraciones de '}${widget.datosSitio.nombre}'),
             RatingBarIndicator(
-              // initialRating: (widget.datosSitio.calificacion).toDouble(),
-              // minRating: 1,
               rating: (widget.datosSitio.calificacion.toDouble()),
-
               direction: Axis.horizontal,
               // allowHalfRating: true,
               itemSize: 25,
