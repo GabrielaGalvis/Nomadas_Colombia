@@ -2,12 +2,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ptoyecto_ciclo4/Pages/detalle_sitio_page.dart';
 import 'package:ptoyecto_ciclo4/models/datossitio.dart';
-import 'package:ptoyecto_ciclo4/models/micardimage.dart';
 
 class ListasPage extends StatefulWidget {
   const ListasPage({super.key});
@@ -32,8 +29,8 @@ class _ListasPageState extends State<ListasPage> {
       if (sitio.docs.isNotEmpty) {
         for (var list in sitio.docs) {
           sitios.add(list.data());
-          print('----------------------->>>>>>>>>>>>>>> ' +
-              list.data().toString());
+          // print('----------------------->>>>>>>>>>>>>>> ' +
+          //     list.data().toString());
         }
       }
     });
@@ -93,6 +90,7 @@ class _ListasPageState extends State<ListasPage> {
               ],
             );
           }),
+      //bottomNavigationBar: const menuInferior(),
     );
   }
 }

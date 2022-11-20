@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class User {
   var _email;
   var _password;
