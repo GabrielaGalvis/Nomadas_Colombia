@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:ptoyecto_ciclo4/Pages/lugar_pages.dart';
 import 'package:ptoyecto_ciclo4/Pages/listas_page.dart';
 
 import 'favoritos_page.dart';
@@ -27,6 +28,7 @@ class _MenuInferiorState extends State<MenuInferior> {
     paginas = [];
     paginas.add(ListasPage());
     paginas.add(FavoritosPage());
+    paginas.add(LugarPage());
   }
 
   void _onItemTapped(int paginas) {
@@ -53,6 +55,9 @@ class _MenuInferiorState extends State<MenuInferior> {
               label: 'Lista de Sitios'),
           BottomNavigationBarItem(
               icon: Icon(FontAwesomeIcons.star, size: 20), label: 'Favoritos'),
+          BottomNavigationBarItem(
+              icon: Icon(FontAwesomeIcons.locationDot, size: 20),
+              label: 'Ubicación'),
         ],
         backgroundColor: Colors.lightBlue,
         selectedItemColor: const Color.fromARGB(255, 2, 50, 89),
